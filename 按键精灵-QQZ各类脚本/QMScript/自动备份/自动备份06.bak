@@ -1,0 +1,46 @@
+[General]
+SyntaxVersion=2
+BeginHotkey=121
+BeginHotkeyMod=0
+PauseHotkey=0
+PauseHotkeyMod=0
+StopHotkey=123
+StopHotkeyMod=0
+RunOnce=1
+EnableWindow=
+MacroID=f623b230-7ca7-43db-871f-e2e24258428a
+Description=daka
+Enable=1
+AutoRun=0
+[Repeat]
+Type=0
+Number=1
+[SetupUI]
+Type=2
+QUI=
+[Relative]
+SetupOCXFile=
+[Comment]
+
+[Script]
+While true
+Delay 1000
+周几 = Weekday(Now) -1
+小时 = Hour(Now)
+分钟 = Minute(Now)
+
+//If 周几 >= 1 and 周几 <= 5 and 小时 = 08 and 分钟 = 00 Then 
+//If 周几 = 7 and 小时 = 08 and 分钟 = 00 Then
+If 周几 >= 1 and 周几 <= 5 and 小时 = 11 and 分钟 = 15 Then 
+MoveTo 893, 396
+Delay 1690
+LeftDown 1
+Delay 2
+LeftDown 1
+Delay 379
+LeftUp 1
+Delay 2
+LeftUp 1
+Delay 60000
+End If
+Wend

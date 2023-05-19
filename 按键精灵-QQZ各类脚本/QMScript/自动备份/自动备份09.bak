@@ -1,0 +1,39 @@
+[General]
+SyntaxVersion=2
+BeginHotkey=121
+BeginHotkeyMod=0
+PauseHotkey=0
+PauseHotkeyMod=0
+StopHotkey=123
+StopHotkeyMod=0
+RunOnce=1
+EnableWindow=
+MacroID=cae1c6b2-0f8d-4c04-b5d9-2cb23e3e224d
+Description=自动喂宠物法仙
+Enable=1
+AutoRun=0
+[Repeat]
+Type=0
+Number=1
+[SetupUI]
+Type=2
+QUI=
+[Relative]
+SetupOCXFile=
+[Comment]
+
+[Script]
+Hwnd2 = Plugin.Window.Find("QQSwordWinClass", "QQ自由幻想(4.50公测版)    客户端版本号:1.1.28.147")
+If Hwnd2 = 0 Then 
+	TracePrint "句柄没有找到"
+End If
+
+do
+//KeyDown "F4", 1
+//Delay 147
+//KeyUp "F4", 1
+Plugin.Bkgnd.KeyPress Hwnd2,116
+Delay 100
+Plugin.Bkgnd.KeyPress Hwnd2, 117
+Delay 1801000
+loop
